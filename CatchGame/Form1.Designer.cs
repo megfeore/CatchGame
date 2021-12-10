@@ -32,6 +32,8 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
             this.gameLoop = new System.Windows.Forms.Timer(this.components);
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.subTitleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timeLabel
@@ -57,9 +59,32 @@
             // 
             // gameLoop
             // 
-            this.gameLoop.Enabled = true;
             this.gameLoop.Interval = 20;
             this.gameLoop.Tick += new System.EventHandler(this.gameLoop_Tick);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.ForeColor = System.Drawing.Color.Red;
+            this.titleLabel.Location = new System.Drawing.Point(27, 195);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(527, 27);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "titleLabel";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // subTitleLabel
+            // 
+            this.subTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.subTitleLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTitleLabel.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.subTitleLabel.Location = new System.Drawing.Point(27, 237);
+            this.subTitleLabel.Name = "subTitleLabel";
+            this.subTitleLabel.Size = new System.Drawing.Size(527, 54);
+            this.subTitleLabel.TabIndex = 3;
+            this.subTitleLabel.Text = "subTitleLabel";
+            this.subTitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
@@ -67,6 +92,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.subTitleLabel);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.timeLabel);
             this.DoubleBuffered = true;
@@ -85,6 +112,8 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Timer gameLoop;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label subTitleLabel;
     }
 }
 
